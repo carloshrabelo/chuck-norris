@@ -12,6 +12,7 @@ export default css`
   --primary-contrast: var(--white);
   --primary-darken: #b4441a;
 
+  --font-xs: 12px;
   --font-sm: 14px;
   --font: 16px;
   --font-md: 24px;
