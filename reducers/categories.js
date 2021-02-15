@@ -2,7 +2,7 @@ import { combineReducers } from '@reduxjs/toolkit'
 import API from 'services/ChuckNorris'
 
 export const initialState = {
-  isLoading: true,
+  isLoading: false,
   error: false,
   data: []
 }
@@ -33,16 +33,8 @@ const error = (state = initialState.error, { type }) => {
   return mapping[type] ?? state
 }
 
-const data = (state = initialState.data, { type, payload }) => {
-  if (type !== SUCCESS) return state
-
-  return [...state, ...payload]
-}
-
-const request = payload => ({
-  type: REQUEST,
-  payload
-})
+const data = (state = initialState.data, { type, payload }) =>
+  type !== SUCCESS ? state : payload
 
 const onSuccess = payload => ({
   type: SUCCESS,
@@ -53,13 +45,10 @@ const onError = () => ({
   type: FAILURE
 })
 
-export const search = id => dispatch => {
-  dispatch(request(id))
-
-  return API('categories')
+export const search = () => dispatch =>
+  API('categories')
     .then(payload => dispatch(onSuccess(payload)))
     .catch(err => dispatch(onError(err)))
-}
 
 export const selector = e => e[action.toLowerCase()]
 

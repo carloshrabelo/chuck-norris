@@ -14,11 +14,11 @@ const Main = styled.div`
 
 export default function Home () {
   const dispatch = useDispatch()
-  const { data } = useSelector(selector)
+  const { data, isLoading } = useSelector(selector)
 
   useEffect(() => {
-    !data.length && dispatch(search())
-  }, [])
+    !isLoading && !data.length && dispatch(search())
+  }, [isLoading, data])
 
   return (
     <Main>

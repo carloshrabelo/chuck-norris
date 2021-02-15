@@ -1,15 +1,26 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Title = styled.h1`
   margin: 0;
 `
 
+const ItemDisabled = p =>
+  p.disabled &&
+  css`
+    background: var(--bg-disabled);
+  `
+
 export const Item = styled.a`
+  color: var(--text);
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     background: var(--bg);
+    ${ItemDisabled}
   }
+
+  ${ItemDisabled}
 `
 
 export const Footer = styled.div`
@@ -42,6 +53,8 @@ export const Header = styled.div`
 `
 
 export const Content = styled.div`
+  align-items: center;
+  display: flex;
   flex: 1;
   gap: var(--space);
   padding: var(--space);

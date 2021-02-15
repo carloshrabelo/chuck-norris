@@ -7,6 +7,7 @@ export default css`
 
   --bg: #f0f2f5;
   --bg-hover: #f5f5f5;
+  --bg-disabled: #f5f5f5;
 
   --primary: #f15b23;
   --primary-contrast: var(--white);
@@ -19,7 +20,6 @@ export default css`
 
   --font-family: 'Courier New', Arial, sans-serif;
   --font-family-header: '04b_30';
-
 
   --space-xs: 4px;
   --space-sm: 8px;
