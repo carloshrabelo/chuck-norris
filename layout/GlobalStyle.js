@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import variables from './variables'
+import { createGlobalStyle } from "styled-components";
+import variables from "./variables";
 
 export default createGlobalStyle`
   @font-face {
@@ -43,13 +43,24 @@ export default createGlobalStyle`
   #__next{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 0 var(--space-md);
+    height: 100%;
+    overflow: auto;
   }
 
   main{
     display: flex;
     flex: 1;
     flex-direction: column;
+    padding: var(--space-md);
   }
-`
+
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+
+    &:hover{
+      color: var(--primary-lighten);
+    }
+  }
+`;

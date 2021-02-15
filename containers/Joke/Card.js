@@ -17,6 +17,7 @@ const ArrowLink = styled(IoMdShareAlt)`
 `;
 
 const EmptyTitle = styled.h2`
+  color: var(--secondary);
   text-align: center;
 `;
 

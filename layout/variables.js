@@ -1,25 +1,28 @@
-import { css } from 'styled-components'
+import { css } from "styled-components";
 
 export default css`
   --white: #fff;
   --black: #4a4a4a;
-  --gray: #999;
+  --gray: #f0f2f5;
 
-  --bg: #f0f2f5;
+  --bg: var(--gray);
   --bg-hover: #f5f5f5;
   --bg-disabled: #f5f5f5;
 
   --primary: #f15b23;
   --primary-contrast: var(--white);
   --primary-darken: #b4441a;
+  --primary-lighten: #f4845a;
+
+  --secondary: #22dcf1;
 
   --font-xs: 12px;
   --font-sm: 14px;
   --font: 16px;
   --font-md: 24px;
 
-  --font-family: 'Courier New', Arial, sans-serif;
-  --font-family-header: '04b_30';
+  --font-family: "Courier New", Arial, sans-serif;
+  --font-family-header: "04b_30";
 
   --space-xs: 4px;
   --space-sm: 8px;
@@ -28,9 +31,11 @@ export default css`
   --space-lg: 32px;
   --space-xlg: 48px;
 
-  --box-shadow: 0 8px 16px -2px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  --box-shadow: 0 8px 16px -2px rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
 
   --transition: 0.3s;
 
   --paper-bg: var(--white);
-`
+  --paper-bg-hover: var(--gray);
+`;
