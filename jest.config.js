@@ -16,6 +16,8 @@ module.exports = {
     '**/*.{js,jsx}',
     '!*.{js,jsx}',
     '!.next/**',
+    '!out/**',
+    '!mock/**',
     '!**/node_modules/**',
     '!**/vendor/**',
     '!**/coverage/**'
