@@ -43,18 +43,18 @@ const data = (state = initialState.data, { type, payload }) =>
     ? state
     : [payload, ...state?.filter((current) => current.id !== payload.id)];
 
-const request = (category) => ({
+export const request = (category) => ({
   type: REQUEST,
   category,
 });
 
-const onSuccess = (payload, category) => ({
+export const onSuccess = (payload, category) => ({
   type: SUCCESS,
   payload,
   category,
 });
 
-const onError = (category) => ({
+export const onError = (category) => ({
   type: FAILURE,
   category,
 });

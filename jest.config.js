@@ -1,20 +1,24 @@
 module.exports = {
-  roots: ["<rootDir>"],
-  modulePaths: ["<rootDir>"],
-  testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
-  setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
+  roots: ['<rootDir>'],
+  modulePaths: ['<rootDir>'],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/out/',
+    '<rootDir>/node_modules/'
+  ],
+  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+    '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest'
   },
 
   collectCoverage: true,
   collectCoverageFrom: [
-    "**/*.{js,jsx}",
-    "!*.{js,jsx}",
-    "!.next/**",
-    "!**/node_modules/**",
-    "!**/vendor/**",
-    "!**/coverage/**",
+    '**/*.{js,jsx}',
+    '!*.{js,jsx}',
+    '!.next/**',
+    '!**/node_modules/**',
+    '!**/vendor/**',
+    '!**/coverage/**'
   ],
-  bail: true,
-};
+  bail: true
+}

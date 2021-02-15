@@ -36,12 +36,12 @@ const error = (state = initialState.error, { type }) => {
 const data = (state = initialState.data, { type, payload }) =>
   type !== SUCCESS ? state : payload
 
-const onSuccess = payload => ({
+export const onSuccess = payload => ({
   type: SUCCESS,
   payload
 })
 
-const onError = () => ({
+export const onError = () => ({
   type: FAILURE
 })
 
